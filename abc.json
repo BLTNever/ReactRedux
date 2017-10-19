@@ -1,0 +1,15 @@
+{
+    "assets":{
+        "type":"command",
+        "command":{
+            "cmd":[
+                "tnpm ii",
+				"npm run build"
+            ]
+        },
+        "ignore":[
+            "node_modules",
+            "build"
+        ]
+    }
+}

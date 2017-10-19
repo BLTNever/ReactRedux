@@ -1,0 +1,57 @@
+{
+  "name": "h5-m",
+  "version": "0.0.1",
+  "description": "React",
+  "repository": {},
+  "license": "MIT",
+  "entry": {
+    "index": "./src",
+    "debug": "./debug/debug"
+  },
+  "dependencies": {
+    "@ali/ding-mediaid": "^0.6.0",
+    "antd": "^2.10.1",
+    "classnames": "^2.2.5",
+    "es6-promise": "^4.1.0",
+    "i18next": "^8.2.1",
+    "prop-types": "^15.5.10",
+    "react": "^15.4.4",
+    "react-dom": "^15.4.4",
+    "react-redux": "^5.0.5",
+    "react-router": "^3.0.3",
+    "react-router-redux": "^4.0.8",
+    "redux": "^3.6.0",
+    "redux-actions": "^2.2.1",
+    "redux-saga": "^0.15.3",
+    "redux-thunk": "^2.2.0"
+  },
+  "devDependencies": {
+    "@ali/ding-cli": "^0.0.7",
+    "@ali/ding-devtools": "^0.0.6",
+    "atool-build": "^0.11.1",
+    "autoprefixer": "^7.1.0",
+    "babel-eslint": "^7.2.3",
+    "babel-plugin-import": "^1.1.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-runtime": "^6.23.0",
+    "dora": "^0.4.3",
+    "dora-plugin-proxy": "^0.8.5",
+    "dora-plugin-webpack": "^0.8.1",
+    "dora-plugin-webpack-hmr": "^0.2.1",
+    "eslint": "^3.19.0",
+    "eslint-plugin-react": "^7.0.1",
+    "npm": "^4.6.1",
+    "postcss-pxtorem": "^4.0.1",
+    "pre-commit": "^1.2.2"
+  },
+  "scripts": {
+    "start": "dora -p 8181 --plugins \"proxy,webpack,webpack-hmr\" & dingtalk socket -p 3000",
+    "build": "atool-build",
+    "eslint": "eslint ./src",
+    "precommit-msg": "echo '正在执行eslint验证...' && exit 0"
+  },
+  "pre-commit": [
+    "precommit-msg",
+    "eslint"
+  ]
+}

@@ -1,0 +1,15 @@
+//http://code.visualstudio.com/docs/languages/jsconfig
+{
+    "compilerOptions": {
+        "module": "es6",
+        "jsx": "react",
+        "experimentalDecorators": true,
+        "allowSyntheticDefaultImports": true,
+        "allowUnreachableCode": true,
+        "allowUnusedLabels": true,
+        "target": "es6"
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}
